@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.jpeg">
+    <title>Mirathukum</title>
+</head>
+<body>
+    <div class="container">
+
+        <!-- left column -->
+        <div class="column left-column">
+
+            <img src="logo.jpeg" class="logo" alt="logo">
+
+            <div id="unique-list" class="list">
+                <div id="wife"    class="list-item" data-count="1">Wife</div>
+                <div id="husband" class="list-item" data-count="1">Husband</div>
+                <div id="mother" class="list-item" data-count="1">Mother</div>
+                <div id="father" class="list-item" data-count="1">Father</div>
+            </div>
+            <div id="others-list" class="list">
+                <div id="grandMother"   class="list-item" data-count="1">Grand Mother <input type="number" min="1" max="2" value="1" style="float: right;" hidden></div>
+                <div id="grandFather"   class="list-item" data-count="1">Grand Father <input type="number" min="1" max="2" value="1" style="float: right;" hidden></div>
+                <br>
+
+                <div id="daughter"      class="list-item" data-count="1">Daughter <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="son"           class="list-item" data-count="1">Son <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="sonsDaughter"  class="list-item" data-count="1">Son's Daughter <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="sonsSon"       class="list-item" data-count="1">Son's Son <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <br>
+
+                <div id="sister"        class="list-item" data-count="1">Sister <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="brother"       class="list-item" data-count="1">Brother <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="motherSister"  class="list-item" data-count="1">Mother Sister <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="motherBrothe"  class="list-item" data-count="1">Mother Brother <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="fatherSister"  class="list-item" data-count="1">Father Sister <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <div id="fatherBrothe"  class="list-item" data-count="1">Father Brother <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+                <br>
+
+                <div id="uncle" class="list-item" data-count="1">Uncle <input type="number" min="1" max="99" value="1" style="float: right;" hidden></div>
+            </div>
+        </div>
+
+        <!-- right column -->
+        <div class="column right-column">
+            <p class="right-column-title">Members</p>
+            <div id="drop-list" class="list drag-here">
+                <p id="drag-here-p">Drag here</p>
+            </div>
+        </div>
+
+        <!--receipt column-->
+        <div class="receipt-container">
+            <input id="confirm-button" type="button" value="Calculate" onClick="calculateCount()"/>
+            <div class="tab"></div>
+
+            <div class="paid"><p>For more info</p></div>
+
+            <div class="receipt" data-silde-status="up">
+                <div class="paper">
+                    <div class="title">Result</div>
+                    <div class="date">Share of same members</div>
+                    <table>
+                        <tbody id="result-table">
+                        </tbody>
+                    </table>
+                    <div class="sign center">
+
+                        <div id="upc-a">
+                            <div id="upc-wrap">
+                                <!-- begin UPC -->
+                                <div class="m e long"></div><div class="m o long"></div><div class="m e long"></div>
+                                <!--Quiet Zone-->
+                                <div class="l">
+                                    <!-- begin L -->
+                                    <div id="l1"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e">						 </div></div><div id="l2"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e">						 </div></div><div id="l3"><div class="m o"></div><div class="m e"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m e">						 </div></div><div id="l4"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e">						 </div></div><div id="l5"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e">						 </div></div><div id="l6"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e">						 </div></div></div>
+                                    <!-- begin M -->
+                                    <div class="m o long"></div><div class="m e long"></div><div class="m o long"></div><div class="m e long"></div><div class="m o long"></div>
+                                    <!-- end M -->
+                                    <div class="r">
+                                        <!-- begin R -->
+                                        <div id="r1"><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m e"></div><div class="m e">						 </div></div><div id="r2"><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m e">						 </div></div><div id="r3"><div class="m o"></div><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m e">						 </div></div><div id="r4"><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m e">						 </div></div><div id="r5"><div class="m o"></div><div class="m e"></div><div class="m e"></div><div class="m e"></div><div class="m o"></div><div class="m e"></div><div class="m e">						 </div></div><div id="r6"><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m o"></div><div class="m o"></div><div class="m e"></div><div class="m e">						 </div></div></div>
+                                        <!-- Quiet Zone --><div class="m e long"></div><div class="m o long"></div><div class="m e long"></div>
+                            <!-- end UPC -->
+                            </div><!-- end upc-wrap -->
+                            <div id="l-digits" class="digits">16121</div>
+                            <div id="r-digits" class="digits">73037</div>
+                        </div>
+
+                        <br/>
+                        <div class="thankyou">
+                        For more info
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="count.js"></script>
+    <script src="sort.js"></script>
+    <script src="family.js"></script>
+    <script src="FamilyMember.js"></script>
+    <script src="assignFromDic.js"></script>
+    <script src="calculate.js"></script>
+
+</body>
+</html>
